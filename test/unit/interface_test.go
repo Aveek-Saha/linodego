@@ -52,6 +52,7 @@ func TestInterface_List(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Error fetching interfaces: %v", err)
 	}
+	require.Len(t, ifaces, 3)
 
 	assert.Equal(t, 123, ifaces[0].ID)
 	assert.Equal(t, 1, ifaces[0].Version)
